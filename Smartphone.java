@@ -1,3 +1,8 @@
+/*  Nama : Phina Putri Amalia
+    Kelas : Reg TI20A
+    NIM : 20200040063
+ */
+
 import java.util.Scanner;
 
 public class Smartphone {
@@ -7,12 +12,12 @@ public class Smartphone {
 
   public static void main(String[] args) {
     Phone SamsungGalaxyZFlip = new Samsung();
-    Phone iPhone11 = new iPhone();
+    Phone XiaomiNote10 = new Xiaomi();
 
     Scanner input = new Scanner(System.in);
 
     System.out.println("--------- Pilih HP ---------");
-    System.out.println("1. iPhone 11" );
+    System.out.println("1. Xiaomi Note 10" );
     System.out.println("2. Samsung Galaxy Z Flip");
     System.out.println("-----------------------------");
 
@@ -21,7 +26,7 @@ public class Smartphone {
 
     switch(answer) {
       case "1":
-        phoneOfChoice = iPhone11;
+        phoneOfChoice = XiaomiNote10;
         break;
       case "2":
         phoneOfChoice = SamsungGalaxyZFlip;
@@ -167,11 +172,11 @@ class Samsung implements Phone {
 }
 
 
-class iPhone implements Phone {
+class Xiaomi implements Phone {
   int volume;
   boolean isPower;
 
-  public iPhone() {
+  public Xiaomi() {
     volume = 50;
   }
 
@@ -182,8 +187,8 @@ class iPhone implements Phone {
   @Override
   public void powerOn() {
     isPower = true;
-    System.out.println("HP iPhone Menyala");
-    System.out.println("iPhone-panangan-nuju-salaman.gif");
+    System.out.println("HP Xiaomi Menyala");
+    System.out.println("Xiaomi-panangan-nuju-salaman.gif");
   }
 
   @Override
